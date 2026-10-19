@@ -1,0 +1,22 @@
+{
+  "name": "catwoman-cloudflare-live",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "CatWoman control panel and VLESS-over-WebSocket gateway for Cloudflare Workers and D1.",
+  "scripts": {
+    "dev": "wrangler dev --local --ip 0.0.0.0",
+    "test": "node --test",
+    "check": "node --check src/index.js && node --test",
+    "dry-run": "wrangler deploy --dry-run --outdir .wrangler-dry-run",
+    "deploy": "wrangler deploy",
+    "tunnel:test": "node scripts/live-tunnel.mjs",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "4.151.1"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
